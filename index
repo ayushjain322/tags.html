@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<table style="border-color: red; background-color: bisque;" border="3" cellspacing="2" cellpadding="2">
+		<caption>Free Coding Resources</caption>
+		<tr >
+			<th>NAME</th>
+			<th>SUBJECT</th>
+			<th>MARKS</th>
+		</tr>
+		<tr>
+			<td rowspan="3">Hilary</td>
+		</tr>
+		<tr>
+			<td>Advanced Web</td>
+			<td>75</td>
+		</tr>
+		<tr>
+			<td>Operating System</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<td rowspan="3">Lary</td>
+		</tr>
+		<tr>
+			<td>Advanced Web</td>
+			<td>80</td>
+		</tr>
+		<tr>
+			<td>Operating System</td>
+			<td>75</td>
+		</tr>
+		<tr>
+			<td rowspan="3"></td>
+		</tr>
+		<tr>
+			<td colspan="2">Total Average: 72.5</td>
+		</tr>
+	</table>
+</body>
+</html>
