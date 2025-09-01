@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8fbff;
+        }
+        header {
+            background: #1565c0;
+            color: #fff;
+            padding: 1rem 0 0.5rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #1976d2;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.2s;
+            display: inline-block;
+        }
+        nav a:hover {
+            color: #1565c0;
+        }
+        .home-section {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #e3f2fd;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .home-section h2 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+        .home-section p {
+            color: #1976d2;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .home-btns a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: #1565c0;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .home-btns a:hover {
+            background: #90caf9;
+            color: #1565c0;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.05);
+        }
+        .blog-post {
+            margin-bottom: 2rem;
+        }
+        .blog-post h2 {
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+        }
+        .blog-post p {
+            color: #1565c0;
+            line-height: 1.6;
+        }
+        /* Footer Styles */
+        footer {
+            background: #1565c0;
+            color: #fff;
+            padding: 2.5rem 0 1.2rem 0;
+            text-align: left;
+            position: relative;
+            width: 100%;
+            margin-top: 3rem;
+            border-top: 1px solid #1976d2;
+        }
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 2rem;
+        }
+        .footer-about,
+        .footer-links,
+        .footer-contact {
+            flex: 1 1 220px;
+            margin: 0 1rem 1.5rem 1rem;
+        }
+        .footer-about h3,
+        .footer-links h3,
+        .footer-contact h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .footer-about p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 0.7rem;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+        .footer-contact p {
+            margin: 0.3rem 0;
+            color: #ccc;
+            font-size: 1rem;
+        }
+        .footer-contact a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .footer-social {
+            margin-top: 1rem;
+        }
+        .footer-social a {
+            display: inline-block;
+            margin-right: 0.7rem;
+            color: #fff;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: #ffd700;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #bbb;
+            font-size: 0.98rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+        /* Responsive Footer */
+        @media (max-width: 900px) {
+            .footer-container {
+                flex-direction: column;
+                padding: 0 1rem;
+            }
+            .footer-about,
+            .footer-links,
+            .footer-contact {
+                margin: 0 0 1.5rem 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-container {
+                padding: 0 0.5rem;
+            }
+            .footer-about,
+            .footer-links,
+            .footer-contact {
+                font-size: 0.97rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-container {
+                padding: 0 0.2rem;
+            }
+            .footer-about,
+            .footer-links,
+            .footer-contact {
+                margin: 0 0 1rem 0;
+            }
+            .footer-bottom {
+                font-size: 0.92rem;
+            }
+        }
+        /* Prevent footer overlap on small screens */
+        @media (max-width: 700px) {
+            body {
+                padding-bottom: 0;
+            }
+            footer {
+                position: relative;
+            }
+        }
+    </style>
+    <!-- Font Awesome for social icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tech-news">Tech News</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section class="home-section" id="home">
+            <h2>Discover, Learn, and Grow</h2>
+            <p>
+                Welcome to your one-stop destination for the latest in technology, hands-on tutorials, and honest reviews. Whether you're a tech enthusiast, a budding developer, or just curious, there's something here for everyone!
+            </p>
+            <div class="home-btns">
+                <a href="#tech-news">Tech News</a>
+                <a href="#tutorials">Tutorials</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+        </section>
+        <div class="blog-post" id="tech-news">
+            <h2>Section 1: Tech News</h2>
+            <p>Stay updated with the latest technology trends and news from around the world.</p>
+        </div>
+        <div class="blog-post" id="tutorials">
+            <h2>Section 2: Tutorials</h2>
+            <p>Find step-by-step guides and tutorials on web development, programming, and more.</p>
+        </div>
+        <div class="blog-post" id="reviews">
+            <h2>Section 3: Reviews</h2>
+            <p>Read honest reviews of the latest gadgets, software, and online tools.</p>
+        </div>
+        <section class="blog-post" id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions, suggestions, or want to collaborate? Reach out to us!</p>
+            <form style="max-width:400px;margin:1.5rem auto 0 auto;text-align:left;">
+                <label for="name" style="display:block;margin-bottom:0.3rem;">Name</label>
+                <input type="text" id="name" name="name" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:4px;border:1px solid #ccc;">
+                <label for="email" style="display:block;margin-bottom:0.3rem;">Email</label>
+                <input type="email" id="email" name="email" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:4px;border:1px solid #ccc;">
+                <label for="message" style="display:block;margin-bottom:0.3rem;">Message</label>
+                <textarea id="message" name="message" rows="4" required style="width:100%;padding:0.5rem;border-radius:4px;border:1px solid #ccc;margin-bottom:1rem;"></textarea>
+                <button type="submit" style="background:#333;color:#fff;padding:0.7rem 1.5rem;border:none;border-radius:4px;font-weight:bold;cursor:pointer;transition:background 0.2s;">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About My Blog</h3>
+                <p>
+                    My Blog Website brings you the latest in tech, insightful tutorials, and honest reviews. Our mission is to empower readers to stay informed and grow their skills in the digital world.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tech-news">Tech News</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@myblogwebsite.com">info@myblogwebsite.com</a></p>
+                <p>Twitter: <a href="https://twitter.com/" target="_blank">@myblogwebsite</a></p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 My Blog Website. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
